@@ -5,18 +5,24 @@ import {AppRouter} from "app/providers/routes";
 import {Navbar} from "widgets/Navbar";
 import {useTheme} from "app/providers/ThemeProvider";
 import {Sidebar} from "widgets/Sidebar";
+import {useTranslation} from "react-i18next";
+
+
 
 const App = () => {
     const {theme} = useTheme();
 
     return (
         <div className={classNames('app', {}, [theme])}>
+            <Suspense fallback="">
+                <Navbar />
 
-            <Navbar />
-            <div className="content-page">
-                <Sidebar />
-                <AppRouter/>
-            </div>
+                <div className="content-page">
+                    <Sidebar />
+                    <AppRouter/>
+                </div>
+            </Suspense>
+
         </div>
     );
 };
