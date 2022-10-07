@@ -1,5 +1,5 @@
 import React, {
-    Suspense, useContext, useEffect, useState,
+    Suspense,
 } from 'react';
 import './styles/index.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
