@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import cls from './PageError.module.scss';
 import CryingFace from '../../../shared/assets/icons/crying-svgrepo-com.svg';
 
@@ -21,7 +21,12 @@ export const PageError = ({ className }: PageErrorProps) => {
                 {t('Произошла непредвидинная ошибка')}
             </p>
             <CryingFace className={cls.PageError__face} />
-            <Button onClick={reloadPage} className={cls.PageError__btn}>
+            <Button
+                onClick={reloadPage}
+                className={cls.PageError__btn}
+                theme={ButtonTheme.BACKGROUND_INVERTED}
+                size={ButtonSize.L}
+            >
                 {t('Обновить страницу')}
             </Button>
         </div>
