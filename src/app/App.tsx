@@ -1,12 +1,12 @@
 import React, {
-    Suspense,
+    Suspense, useState,
 } from 'react';
-import './styles/index.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppRouter } from 'app/providers/routes';
 import { Navbar } from 'widgets/Navbar';
 import { useTheme } from 'app/providers/ThemeProvider';
 import { Sidebar } from 'widgets/Sidebar';
+import { Modal } from 'shared/ui/Modal/Modal';
 
 function App() {
     const { theme } = useTheme();
