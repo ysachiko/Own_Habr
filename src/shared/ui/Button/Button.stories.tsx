@@ -28,6 +28,14 @@ Clear.args = {
     theme: ButtonTheme.CLEAR,
 };
 
+export const ClearInverted = Template.bind({});
+Clear.args = {
+    children: 'Text',
+    theme: ButtonTheme.CLEAR_INVERTED,
+};
+
+ClearInverted.decorators = [ThemeDecorator(Theme.LIGHT)];
+
 Clear.decorators = [ThemeDecorator(Theme.LIGHT)];
 
 export const Outline = Template.bind({});
