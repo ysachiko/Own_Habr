@@ -1,13 +1,11 @@
 import { Button } from 'shared/ui/Button/Button';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
-interface BugButtonProps {
-    className?: string;
-}
-
-// Test component
-export const BugButton = ({ className }: BugButtonProps) => {
+// Компонент для тестирования ErrorBoundary
+export const BugButton = () => {
     const [error, setError] = useState(false);
+    const { t } = useTranslation();
 
     const onThrow = () => setError(true);
 
@@ -18,9 +16,10 @@ export const BugButton = ({ className }: BugButtonProps) => {
     }, [error]);
 
     return (
-        /* eslint-disable */
-        <Button onClick={onThrow}>
-            throw error
+        <Button
+            onClick={onThrow}
+        >
+            {t('throw error')}
         </Button>
     );
 };

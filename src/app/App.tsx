@@ -1,12 +1,9 @@
-import React, {
-    Suspense, useState,
-} from 'react';
+import React, { Suspense } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppRouter } from 'app/providers/routes';
-import { Navbar } from 'widgets/Navbar';
 import { useTheme } from 'app/providers/ThemeProvider';
+import { AppRouter } from 'app/providers/router';
+import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
-import { Modal } from 'shared/ui/Modal/Modal';
 
 function App() {
     const { theme } = useTheme();
@@ -20,7 +17,6 @@ function App() {
                     <AppRouter />
                 </div>
             </Suspense>
-
         </div>
     );
 }
