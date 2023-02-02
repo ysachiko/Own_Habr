@@ -17,5 +17,7 @@
   "decrement": "decrement",
   "Вы ввели неверный логин или пароль": "Uncorrect login or password",
   "Форма авторизации": "Authorization form",
-  "Выйти": "Logout"
+  "Выйти": "Logout",
+  "Страница профиля": "Profile page",
+  "Профиль": "Profile"
 }
