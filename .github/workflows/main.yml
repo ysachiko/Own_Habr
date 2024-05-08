@@ -1,4 +1,4 @@
-name: CI pipeline
+name: linting, testing, building
 on:
   push:
     branches: [ master ]
@@ -25,13 +25,14 @@ jobs:
       - name: linting typescript
         run: npm run lint:ts
         if: always()
-      - name: linting scss
+      - name: linting css
         run: npm run lint:scss
-        if: always()
       - name: unit testing
-        run: npm run test:unit
         if: always()
-#      - name: build storybook
-#        run: npm run storybook:build
-#      - name: screenshot testing
-#        run: npm run test:ui:ci
+        run: npm run test:unit
+      - name: build storybook
+        run: npm run storybook:build
+        if: always()
+      - name: screenshot testing
+        run: npm run test:ui:ci
+        if: always()
